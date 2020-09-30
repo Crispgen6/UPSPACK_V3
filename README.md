@@ -1,3 +1,5 @@
+[Jump to English version](./README_en.md)
+
 # RPi UPSPack V3 产品使用指南
 
 UPSPack v3 是在2020年9月发布的新一代树莓派UPS不间断电源扩展板的最新型号。根据以往v1和v2版本的迭代升级，v3版本是目前树莓派UPS供电最稳定的一种供电方案。
@@ -94,7 +96,7 @@ UPS v3板载电池接口为PH 2.0封装（兼容以往的老型号UPS主板）�
 | :------: | :-----: | :--------------------: | :-------------: | :-----------: | :----------: |
 | 4000mAh  |  5.5h   |          2.5h          |      4.0h       |     3.3h      |     2.0h     |
 | 6500mAh  |  9.0h   |          4.0h          |      6.5h       |     5.2h      |     3.2h     |
-| 10000mAh |  14.5h  |          6.0h          |      10.0h      |      8.5      |     5.0h     |
+| 10000mAh |  14.5h  |          6.0h          |      10.0h      |     8.5h      |     5.0h     |
 
 测试方式：
 
@@ -111,7 +113,7 @@ UPS v3板载电池接口为PH 2.0封装（兼容以往的老型号UPS主板）�
 
 断电不重启是UPS v3的基本功能。以下演示的是Pi4和7寸HDMI屏幕都由UPS v3进行供电，人工拔掉输入的TYPE-C供电线，用来模拟外部停电的情况。Pi4和HDMI屏幕都将维持稳定的工作。
 
-![pwr_off](https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/pwr_off.gif)
+<img src="https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/pwr_off.gif" alt="pwr_off" style="zoom:200%;" />
 
 
 
@@ -127,7 +129,7 @@ UPS v3板载电池接口为PH 2.0封装（兼容以往的老型号UPS主板）�
 
 以下采用可编程电源模拟电池低压开机，UPS主板自动进入低压休眠，5V不输出。当TYPE-C线接入后，自动恢复运行和电压输出的整个过程：
 
-![low_bat](https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/low_bat.gif)
+<img src="https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/low_bat.gif" alt="low_bat" style="zoom:200%;" />
 
 
 
@@ -290,6 +292,10 @@ UPS和树莓派通过UART接口进行信息交互，可以得到更为丰富的�
 
 2. 编辑/boot/config.txt
 
+   ```
+   sudo nano /boot/config.txt
+   ```
+
 3. 增加2行内容，并且ctrl+x保存退出
 
    ```
@@ -304,7 +310,7 @@ UPS和树莓派通过UART接口进行信息交互，可以得到更为丰富的�
    dtoverlay=pi3-miniuart-bt
    ```
    
-4. 再次用ls -al /dev，查看串口0和串口1的指向关系。主要是查看 **serial0 -> ttyAMA0**
+4. 再次用`ls -l /dev`，查看串口0和串口1的指向关系。主要查看 **serial0 -> ttyAMA0** 的指向关系。如下图显示即位正确。
    
    ![uart2](https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/uart2.png)
    
@@ -322,7 +328,7 @@ UPS和树莓派通过UART接口进行信息交互，可以得到更为丰富的�
    ```
    可以看到UPS发到树莓派上的协议数据包。由于Linux上'\n'只换行，不回到行首。所以minicom上看到的协议，会超出屏幕。这没有关系，我们后面可以利用python来过滤这些信息。
 
-   > 提示1：退出minicom按键: Ctrl+A --> z --> x
+   > 提示1：退出minicom按键: Ctrl+A --> z --> x 
    >
    > 提示2：如未看到通讯协议包，说明UART连接不正确，参考[通讯接口](#通讯接口)。或者是 **serial0 -> ttyAMA0** 指向不正确。按照以上步骤仔细检查。
 
@@ -332,6 +338,9 @@ UPS和树莓派通过UART接口进行信息交互，可以得到更为丰富的�
 
 
 ![python_gui](https://cdn.jsdelivr.net/gh/rcdrones/UPSPACK_V3/image/python_gui.png)
+
+
+
 
 
 <!---
@@ -344,8 +353,5 @@ UPS和树莓派通过UART接口进行信息交互，可以得到更为丰富的�
     ```
     sudo python3 /home/pi/UPSPACK_V3/console_py/ups_cmd.py
     ```
+
 -->
-
-   
-
-
