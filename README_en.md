@@ -6,22 +6,22 @@ UPSPack v3 is the latest model of the new generation of Raspberry Pie UPS uninte
 
 ## catalogues
 
-* [Function upgrades](#Function upgrades)
-* [Performance parameters](#Performance parameters)
-  * [Output Current](#Output Current)
-  * [Endurance time](#Endurance time)
-  * [Power failure without restart](#Power failure without restart)
-  * [Low-voltage detection of start-up and automatic shutdown and start-up](#Low-voltage detection of start-up and automatic shutdown and start-up)
-* [Hardware Description](#Hardware Description)
-  * [Interface Description](#Interface Description)
-  * [UPS power supply method](#UPS power supply method)
-  * [LED display](#LED display)
-  * [Battery connector](#Battery connector)
-  * [Communication interface](#Communication interface)
-  * [Mechanical dimensional drawings](#Mechanical dimensional drawings)
-* [Software Drivers](#Software Drivers)
-  * [Safety shutdown](#Safety shutdown)
-  * [UART software](#UART software)
+* [Function upgrades](#Function-upgrades)
+* [Performance parameters](#Performance-parameters)
+  * [Output Current](#Output-Current)
+  * [Endurance time](#Endurance-time)
+  * [Power failure without restart](#Power-failure-without-restart)
+  * [Low-voltage detection of start-up and automatic shutdown and start-up](#Low-voltage-detection-of-start-up-and-automatic-shutdown-and-start-up)
+* [Hardware Description](#Hardware-Description)
+  * [Interface Description](#Interface-Description)
+  * [UPS power supply method](#UPS-power-supply-method)
+  * [LED display](#LED-display)
+  * [Battery connector](#Battery-connector)
+  * [Communication interface](#Communication-interface)
+  * [Mechanical dimensional drawings](#Mechanical-dimensional-drawings)
+* [Software Drivers](#Software-Drivers)
+  * [Safety shutdown](#Safety-shutdown)
+  * [UART software](#UART-software)
 
 
 
